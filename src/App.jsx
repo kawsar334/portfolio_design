@@ -23,7 +23,7 @@ function App() {
         {
           path: "/",
           element: (
-            <PageTitle title="Home">
+            <PageTitle title="portfolio">
               <Home />
             </PageTitle>
           ),

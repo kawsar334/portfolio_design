@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Banner from '../components/Banner'
 import Contact from '../components/Contact'
 import Skill from '../components/Skill'
@@ -6,23 +6,24 @@ import Projects from '../components/Projects'
 import About from '../components/About'
 import Marquee from '../components/marque/Marquee'
 import Services from '../components/Services'
-// import SecondNav from '../assets/SecondNav'
+import LinkBar from '../components/LinkBar'
+import Education from '../components/Education'
+
 
 
 const Home = () => {
+ 
     return (
-        <div id='home' className=''>
+        <div id='home' className='relative'>
 
-            {/* <SecondNav/> */}
              <Banner /> 
-            {/* <Marquee/>  */}
-            
              <Skill/>
-            <Services />
             <Projects/>
             <About/>
-            
+            <Services />
              <Contact/> 
+            {/* <Marquee/>  */}
+            {/* <Education/> */}
 
         </div>
     )

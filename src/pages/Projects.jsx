@@ -28,26 +28,26 @@ const Projects = () => {
             <div className="flex gap-5  flex-wrap justify-center items-center">
                 <button
                     onClick={() => setSelectedCategory('frontend')}
-                    className="py-1 px-4 border  bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="py-1 px-4 border  bg-blue-600 text-blue rounded-md hover:bg-blue-700"
                 >
                     Frontend
                 </button>
                 <button
                     onClick={() => setSelectedCategory('fullstack')}
-                    className="py-1  px-4 border  bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="py-1  px-4 border  bg-blue-600 text-blue rounded-md hover:bg-blue-700"
                 >
                     Fullstack
                 </button>
                 <button
                     onClick={() => setSelectedCategory('reactNative')}
-                    className="py-1  px-4 border  bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="py-1  px-4 border  bg-blue-600 text-blue rounded-md hover:bg-blue-700"
                 >
                     React Native
                 </button>
               
                 <button
                     onClick={() => setSelectedCategory('design')}
-                    className="py-1  px-4 border  bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="py-1  px-4 border  bg-blue-600 text-blue rounded-md hover:bg-blue-700"
                 >
                     Design
                 </button>
