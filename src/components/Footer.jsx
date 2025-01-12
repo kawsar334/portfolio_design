@@ -22,13 +22,13 @@ export const Footer = () => {
       <div className="footer  text-neutral-content md:p-10 text-center flex flex-col md:flex-row justify-between md:items-center md:w-[60%] w-[100%] ">
         <nav>
           <h6 className="footer-title " data-aos="fade-down">Services</h6>
-          <Link to="/portfolio" className="link link-hover" data-aos="fade-down" data-aos-delay="100">Portfolio</Link>
-          <Link to="/projects" className="link link-hover" data-aos="fade-down" data-aos-delay="200">Projects</Link>
-          <Link to="/contact" className="link link-hover"  data-aos-delay="300">Contact</Link>
+          <a href="#Home" className="link link-hover" data-aos="fade-down" data-aos-delay="100">Portfolio</a>
+          <a href="#Projects" className="link link-hover" data-aos="fade-down" data-aos-delay="200">Projects</a>
+          <a href="#Contact" className="link link-hover"  data-aos-delay="300">Contact</a>
         </nav>
         <nav>
           <h6 className="footer-title " data-aos="fade-up">Social Media</h6>
-                 <Link to="https://www.linkedin.com/in/kawsar-firoz-a140b9237/" target="_blank" className="link link-hover" data-aos="fade-up" data-aos-delay="100">LinkedIn</Link>
+          <Link to="https://www.linkedin.com/in/kawsarfiroz11/" target="_blank" className="link link-hover" data-aos="fade-up" data-aos-delay="100">LinkedIn</Link>
                <Link to="https://github.com/kawsar334" target="_blank" className="link link-hover" data-aos="fade-up" data-aos-delay="200">GitHub</Link>
                 <Link to="https://www.facebook.com/profile.php?id=100076935281732" target="_blank" className="link link-hover"  data-aos-delay="300">Facebook</Link>
         </nav>

@@ -8,6 +8,7 @@ import banner from "../assets/shadow.png"
 import { ThemeContext } from '../context/ThemeContext';
 import LinkBar from './LinkBar';
 import  Typed  from 'react-typed';
+import resume from "../assets/kawsar-firoz-resume.pdf"
 
 const Banner = () => {
     const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -63,13 +64,32 @@ const Banner = () => {
                             <a href='#Projects' className={`${darkMode ? "px-3 py-1 text-[14px] bg-gradient-to-r from-transparent to-blue font-bold rounded-lg text-[lightgray]" : "px-3 py-1  text-[14px] bg-[black] font-bold rounded-lg text-[lightgray]"}`}>
                             See work
                             </a>
-                            <a 
+                            {/* <a 
                             
-                                href="https://docs.google.com/document/d/1WZNlY5mHDa4n4kWtCk-tKvwmJsA3OQUxlFyVWF6osFA/export?format=pdf"
+                                href={resume}
+                                 download={resume}
                                 rel="noopener noreferrer"
                             className={` ${darkMode ? "px-3 py-1 text-[14px] bg-gradient-to-l from-transparent to-blue font-bold rounded-lg text-[lightgray] transition-all ease-in duration-300 hover:bg-transparent hover:text-blue" : "px-3 py-1  bg-[black] font-bold rounded-lg text-[14px] text-[lightgray] transition-all ease-in duration-300 hover:bg-transparent hover:text-blue"}`}>
                                 download resume
+                            </a> */}
+                            <a
+                                href={resume}
+                                download="Kawsar_Firoz_Resume.pdf"
+                                rel="noopener noreferrer"
+                                onClick={(e) => {
+                                    const confirmDownload = window.confirm("Are you sure you want to download the resume?");
+                                    if (!confirmDownload) {
+                                        e.preventDefault(); // Prevents the download if the user clicks "Cancel"
+                                    }
+                                }}
+                                className={` ${darkMode
+                                        ? "px-3 py-1 text-[14px] bg-gradient-to-l from-transparent to-blue font-bold rounded-lg text-[lightgray] transition-all ease-in duration-300 hover:bg-transparent hover:text-blue"
+                                        : "px-3 py-1  bg-[black] font-bold rounded-lg text-[14px] text-[lightgray] transition-all ease-in duration-300 hover:bg-transparent hover:text-blue"
+                                    }`}
+                            >
+                                Download Resume
                             </a>
+
                        </div>
                        <div className='mt-10'>
 

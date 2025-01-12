@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ThemeContext } from '../context/ThemeContext';
-
+import resume from "../assets/kawsar-firoz-resume.pdf"
 const Navbar = () => {
 
   const { darkMode, setDarkMode } = useContext(ThemeContext)
@@ -145,7 +145,7 @@ const Navbar = () => {
      
 
         <div className="navbar-end mr-3 cursor-pointer" data-aos="zoom-in">
-          <a href='https://docs.google.com/document/d/1WZNlY5mHDa4n4kWtCk-tKvwmJsA3OQUxlFyVWF6osFA/edit?usp=sharing' target='_blank' className={`${darkMode ? "px-6 py-3 bg-gradient-to-r from-transparent to-blue font-bold rounded-lg text-[lightgray]" : "px-6 py-3  bg-[black] font-bold rounded-lg text-[lightgray]"}`}>Resume</a>
+          <a href={resume} target='_blank' className={`${darkMode ? "px-6 py-3 bg-gradient-to-r from-transparent to-blue font-bold rounded-lg text-[lightgray]" : "px-6 py-3  bg-[black] font-bold rounded-lg text-[lightgray]"}`}>Resume</a>
         </div>
       </div>
     </div>
