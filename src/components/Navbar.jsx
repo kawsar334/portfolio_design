@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ThemeContext } from '../context/ThemeContext';
-import resume from "../assets/kawsar-firoz-resume.pdf"
+import resume from "../assets/kawsar_firoz_resume.pdf"
 const Navbar = () => {
 
   const { darkMode, setDarkMode } = useContext(ThemeContext)
@@ -62,15 +62,7 @@ const Navbar = () => {
           <a href="#Home">Home</a>
         </li>
         <li
-          
-          data-aos-delay="100"
-          className={`${activeId === "About" ? "bg-blue text-white" : ""
-            } px-4  rounded-lg`}
-        >
-          <a href="#About">About</a>
-        </li>
-        <li
-          
+
           data-aos-delay="200"
           className={`${activeId === "skill" ? "bg-blue text-white" : ""
             } px-4  rounded-lg`}
@@ -78,7 +70,7 @@ const Navbar = () => {
           <a href="#skill">Skills</a>
         </li>
         <li
-          
+
           data-aos-delay="300"
           className={`${activeId === "Projects" ? "bg-blue text-white" : ""
             } px-4  rounded-lg`}
@@ -87,6 +79,14 @@ const Navbar = () => {
         </li>
         <li
           
+          data-aos-delay="100"
+          className={`${activeId === "About" ? "bg-blue text-white" : ""
+            } px-4  rounded-lg`}
+        >
+          <a href="#About">About</a>
+        </li>
+      
+        <li
           data-aos-delay="400"
           className={`${activeId === "Contact" ? "bg-blue text-white" : ""
             } px-4  rounded-lg`}

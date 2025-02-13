@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import { ThemeContext } from '../context/ThemeContext';
+import Marquee from './marque/Marquee';
 
 const Services = () => {
     const { darkMode, setDarkMode } = useContext(ThemeContext)
@@ -27,20 +28,20 @@ const Services = () => {
             description: 'Designing intuitive and visually appealing user interfaces for web applications.',
             icon: 'fas fa-palette',
         },
-        {
-            id: 4,
-            title: 'Mobile application Design',
-            description: 'Designing intuitive and visually appealing user interfaces for mobile applications.',
-            icon: 'fas fa-mobile-alt',
-        },
+        // {
+        //     id: 4,
+        //     title: 'Mobile application Design',
+        //     description: 'Designing intuitive and visually appealing user interfaces for mobile applications.',
+        //     icon: 'fas fa-mobile-alt',
+        // },
     ];
 
   
 
     return (
         <div className="bg-transparent py-10">
-            <div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-4xl font-bold text-center my-[100px]">Services</h2>
+            <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col w-[80%] m-auto justify-center items-center gap-2">
                     {services.map((service, index) => (
                         <div

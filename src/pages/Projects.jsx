@@ -9,8 +9,6 @@ import { portfolio } from '../data/portfolioList';
 const Projects = () => {
     // Set initial category to display all projects
     const [selectedCategory, setSelectedCategory] = useState('frontend');
-
-    // Filter projects based on selected category
     const filteredProjects = portfolio[selectedCategory];
 
     return (
@@ -58,7 +56,7 @@ const Projects = () => {
                 {filteredProjects.map((project) => (
                     <div
                         key={project.id}
-                        className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                        className="max-w-sm projectcontainer  mx-auto bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
                         <img
                             className="rounded-t-lg w-full h-48 object-cover"

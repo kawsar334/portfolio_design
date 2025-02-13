@@ -8,7 +8,7 @@ import banner from "../assets/shadow.png"
 import { ThemeContext } from '../context/ThemeContext';
 import LinkBar from './LinkBar';
 import  Typed  from 'react-typed';
-import resume from "../assets/kawsar-firoz-resume.pdf"
+import resume from "../assets/kawsar_firoz_resume.pdf"
 
 const Banner = () => {
     const { darkMode, setDarkMode } = useContext(ThemeContext);
