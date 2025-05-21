@@ -4,7 +4,7 @@ const Popup = ({ data, handleTogle }) => {
     
 
     return (
-        <div className=" w-full overflow-auto md:w-[95%]  m-auto h-[100vh] p-10 bg-white  text-gray-800 flex justify-center items-center gap-2 flex-col   ">
+        <div className=" w-screen overflow-auto md:w-[95%]  m-auto h-screen py-5 bg-white  text-gray-800 flex justify-center items-center gap-2 flex-col   ">
             {data?.images ? (
                 <div className='w-full flex justify-center items-center gap-4 flex-wrap  mt-[150px]'>
                     {data?.images?.slice(0,2).map((item) => (
@@ -13,7 +13,7 @@ const Popup = ({ data, handleTogle }) => {
                 </div>
             )
                 : <img src={data.imageUrl} alt={data.title} className="w-full md:w-[60%] mt-3 h-[300px] md:h-[500px]  rounded object-cover" />}
-            <div className="p-4 w-full  m-auto ">
+            <div className="p-4 w-full  m-auto  ">
                 <div className=" flex justify-start flex-wrap gap-2 my-2 items-center">
                     <h1 className="text-xl font-semibold  capitalize ">Tech:</h1>
                     {data.tech.map((i) => (
@@ -74,7 +74,7 @@ const Popup = ({ data, handleTogle }) => {
                         >
                             server side
                         </a>}
-                        <button className=" text-white bg-[crimson] px-3 py-1 cursor-pointer rounded    " onClick={handleTogle}>Close</button>
+                        <button className=" text-white bg-[crimson] px-3  cursor-pointer rounded    " onClick={handleTogle}>Close</button>
 
                     </div>
                 </div>

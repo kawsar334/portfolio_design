@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Footer } from '../../components/Footer';
 import { ThemeContext } from '../../context/ThemeContext';
+import Navbar2 from '../../components/navbar2/Navbar2';
 const Layout = () => {
     const { darkMode, setDarkMode } = useContext(ThemeContext)
     useEffect(() => {
@@ -18,8 +19,9 @@ const Layout = () => {
     }, []);
 
     return (
-        <div className={`${darkMode ? "bg-secondary text-white" : "bg-white text-black "}`}>
-            <Navbar />
+        <div className={`overflow-x-hidden ${darkMode ? "bg-secondary text-white" : "bg-white text-black "}`}>
+            {/* <Navbar /> */}
+            <Navbar2/>
 
 
             <Outlet />

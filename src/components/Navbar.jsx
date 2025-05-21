@@ -6,7 +6,7 @@ import resume from "../assets/kawsar_firoz_resume.pdf"
 const Navbar = () => {
 
   const { darkMode, setDarkMode } = useContext(ThemeContext)
-  const [activeId, setActiveId] = useState("Home"); // Default active section
+  const [activeId, setActiveId] = useState("Home"); 
 
   // Function to handle scrolling and set active section
   const handleScroll = () => {
@@ -131,7 +131,9 @@ const Navbar = () => {
               <List />
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl   firstletter " data-aos="fade-right"><span className='first-letter:text-blue'>Kawsar</span> <span className='hidden md:flex'>Firoz</span> </a>
+          <a className="btn btn-ghost text-xl   firstletter " data-aos="fade-right"><span className='first-letter:text-blue'>Kawsar</span>
+           <span className='hidden md:flex'>Firoz</span>
+            </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

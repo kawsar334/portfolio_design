@@ -6,10 +6,15 @@ import { ThemeContext } from "../context/ThemeContext";
 import { portfolio } from "../data/portfolioList";
 import "./navbar.css";
 import versatile from "../assets/verse.png"
+import n from "../assets/n.png"
+
 import g from "../assets/g.png"
 import p from "../assets/p.png"
 import sport from "../assets/sport.png"
 import Popup from "./Popup";
+import { frontend } from "../data/Info";
+import DesignModal from "./modals/DesignModal";
+import Tittle from "./Tittle";
 
 
 
@@ -24,7 +29,7 @@ const projects = [
     repoLink: "https://github.com/kawsar334/Employee_Management_server",
     frontendrepo: "https://github.com/kawsar334/Employee_Management_Client",
     serverRepo: "https://github.com/kawsar334/Employee_Management_server",
-    imageUrl: "https://funny-cat-943dae.netlify.app/assets/employeehome-Dz4qn0aG.png",
+    imageUrl: n,
 
     images: [
       "https://funny-cat-943dae.netlify.app/assets/employeehome-Dz4qn0aG.png",
@@ -69,8 +74,27 @@ const projects = [
     liveLink: "https://scintillating-cobbler-d63e79.netlify.app/",
     repoLink: "https://github.com/kawsar334/versatile-ui_design-",
     frontendrepo: "https://github.com/kawsar334/sports-equipment-store_client_side",
-    serverRepo:"https://github.com/kawsar334/sports-equipment-_backend",
+    serverRepo: "https://github.com/kawsar334/sports-equipment-_backend",
     imageUrl: sport,
+    tech: [
+      "React js",
+      "nodejs",
+      "mongodb",
+      "firebase",
+      "Tailwind css ",
+      "Aos", "Toastify", "swiper", "React Awesome - Reveal", "React Tooltip"
+
+    ]
+  },
+  {
+    id: 3,
+    title: "Online Tutor Booking Platform",
+    description: "This is the Online Tutor Booking Platform, allowing users to browse tutors, book sessions, and manage their tutorials. The platform is fully responsive and features a user-friendly interface with dark/light mode toggling, search functionality,",
+    liveLink: "https://gorgeous-shortbread-b2c9fe.netlify.app/",
+    repoLink: "https://github.com/kawsar334/client_Language-Exchange_Online-Tutor-Booking",
+    frontendrepo: "https://github.com/kawsar334/client_Language-Exchange_Online-Tutor-Booking",
+    serverRepo: "https://github.com/kawsar334/server-Language-Exchange---Online-Tutor-Booking-Platform",
+    imageUrl: "https://funny-cat-943dae.netlify.app/assets/languageechange-qeHMw8Ma.png",
     tech: [
       "React js",
       "nodejs",
@@ -83,7 +107,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Ecommerce design",
     description: "This is a web application designed for gadget enthusiasts, allowing users to explore various products, view details, and manage items in their cart and wishlist. The site also features a dashboard for users to track statistics and interact with product data.",
     liveLink: "https://deft-kelpie-0f29a9.netlify.app/",
@@ -96,8 +120,8 @@ const projects = [
 
     ]
   },
- 
- 
+
+
 ];
 
 const statsData = [
@@ -112,36 +136,34 @@ const statsData = [
 
 const ProjectSection = () => {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
-  const [modal, setModal]= useState(false);
+  const [modal, setModal] = useState(false);
   const [data, setData] = useState({});
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const handleData = (item)=>{
+  const handleData = (item) => {
     setData(item);
     setModal(true);
   }
-  const handleTogle=()=>{
+  const handleTogle = () => {
     setModal(!modal)
   }
   return (
     <section id="Projects" className="py-12 bg-transparent w-full">
       <div className="w-full mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8" data-aos="fade-up">
-          My Projects
-        </h2>
-        <p className="text-lg mb-12" data-aos="fade-up" data-aos-delay="100">
+        <Tittle text="My Projects"/>
+        <p className="text-lg mb-12 px-5" data-aos="fade-up" data-aos-delay="100">
           Below are some of the projects I've worked on. Feel free to check them out!
         </p>
       </div>
 
       {/* Project Cards */}
-      <div className="flex flex-wrap justify-center gap-6 px-4 w-full md:w-[90%] m-auto">
-       {modal&&<div className="fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.3)] z-[100] "> 
+      <div className="flex flex-wrap justify-center gap-6 px-4 w-full md:w-[92%] m-auto">
+        {modal && <div className="fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.3)] z-[100] ">
 
-          <Popup data={data} handleTogle={handleTogle}/>
+          <Popup data={data} handleTogle={handleTogle} />
         </div>}
         {projects.map((project, index) => (
           <div
@@ -153,12 +175,12 @@ const ProjectSection = () => {
             <figure>
               <img onClick={() => handleData(project)} src={project.imageUrl} alt={project.title} className="w-full h-[200px] object-cover" />
             </figure>
-           
+
             <div className="p-4 ">
-              <h3 className="text-xl font-semibold mb-2 w-full  hover:text-blue transition-all duration-500" onClick={() => handleData(project)}>{project.title.slice(0,20)}...</h3>
+              <h3 className="text-xl font-semibold mb-2 w-full  hover:text-blue transition-all duration-500" onClick={() => handleData(project)}>{project.title.slice(0, 20)}...</h3>
               <div className="absolute top-[100px] right-[10px p-2 flex justify-center items-center gap-1 flex-wrap">
-                {project.tech.slice(0,3).map((i) => (
-                  <span className="ml-1 bg-red-400 rounded px-1">{i}</span>
+                {project.tech.slice(0, 4).map((i) => (
+                  <span className="ml-1 bg-black backdrop-opacity-30 rounded px-1">{i}</span>
                 ))}
               </div>
               <div className="flex justify-between items-center mt-10 ">
@@ -180,10 +202,12 @@ const ProjectSection = () => {
                 </a>
               </div>
             </div>
-            <button className="text-sm  absolute bottom-[-60px] left-4      block py-2 cursor-pointer   bg-blue text-white rounded capitalize   w-[90%]     detailsbtn" onClick={()=>handleData(project)}>see Details</button>
+            <button className="text-sm  absolute bottom-[-60px] left-4      block py-2 cursor-pointer   bg-blue text-white rounded capitalize   w-[90%]     detailsbtn" onClick={() => handleData(project)}>see Details</button>
           </div>
         ))}
       </div>
+
+      <DesignModal text="more works"/>
 
       {/* Stats Cards */}
       {/* <div className="mt-16 flex flex-wrap justify-center items-center gap-4">
@@ -200,6 +224,7 @@ const ProjectSection = () => {
           </div>
         ))}
       </div> */}
+      
     </section>
   );
 };

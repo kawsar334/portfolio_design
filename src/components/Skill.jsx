@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS CSS
+import Tittle from './Tittle';
 
 const Skills = () => {
   useEffect(() => {
@@ -65,7 +66,9 @@ const Skills = () => {
     <div className='w-full flex justify-center items-center my-10 py-10 ' id='skill'>
       <div className="bg-transparent py-10 px-6 w-full md:w-[70%] m-auto  flex justify-center items-center flex-col">
         <div className="w-full mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-8" data-aos="fade-up">Skills</h2>
+          {/* <h2 className="text-4xl font-bold text-center mb-8" data-aos="fade-up">Skills</h2> */}
+
+          <Tittle text="Skills"/>
           {skills.map((skill, index) => (
             <div key={index} className="mb-4" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
               <h3 className="text-2xl font-semibold mb-4">{skill.category}</h3>
